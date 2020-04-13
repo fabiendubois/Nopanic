@@ -1,0 +1,28 @@
+<nb-card [accent]="nbCardAccent">
+    <nb-card-header *ngIf="withTitle">
+        <span>{{deployment.application | titlecase}}</span>
+        <span class="status" *ngIf="deployment.status">
+            <nb-icon icon="checkmark-outline"></nb-icon>
+        </span>
+        <span class="status" *ngIf="!deployment.status">
+            <nb-icon icon="close-outline"></nb-icon>
+        </span>
+
+    </nb-card-header>
+    <nb-card-body>
+
+        <div>
+            <span>Env : {{deployment.environment}} </span>
+            <span style="float: right;">Version : {{deployment.version}}</span>
+        </div>
+
+        <div style="margin-top: 10px;">
+            <span>
+                Date : {{deployment.timestamp | date:'medium' }}
+            </span>
+        </div>
+    </nb-card-body>
+    <nb-card-footer>
+        <span class="text-hint footer">{{deployment.id}}</span>
+    </nb-card-footer>
+</nb-card>

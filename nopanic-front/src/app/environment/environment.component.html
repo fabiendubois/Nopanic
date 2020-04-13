@@ -1,0 +1,8 @@
+<div class="container">
+    <nb-card class="container_card"  *ngFor="let env of environments">
+        <nb-card-header style="text-align: center;"><span class="container_card_title">{{env | titlecase}}</span></nb-card-header>
+        <nb-card-body>
+            <app-environment-detail [environment]="env"></app-environment-detail>
+        </nb-card-body>
+    </nb-card>
+</div>

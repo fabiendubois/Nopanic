@@ -1,0 +1,33 @@
+<nb-card status="basic" [nbSpinner]="loading" nbSpinnerStatus="basic" nbSpinnerSize="small" nbSpinnerMessage="">
+    <nb-card-header>Déploiements par environnement</nb-card-header>
+    <nb-card-body>
+
+        <table [nbTreeGrid]="data">
+
+            <tr nbTreeGridHeaderRow *nbTreeGridHeaderRowDef="allColumns"></tr>
+            <tr nbTreeGridRow *nbTreeGridRowDef="let row; columns: allColumns"></tr>
+
+            <ng-container nbTreeGridColumnDef="environment">
+                <th nbTreeGridHeaderCell *nbTreeGridHeaderCellDef>Environment</th>
+                <td nbTreeGridCell *nbTreeGridCellDef="let row">{{row.data.environment}}</td>
+            </ng-container>
+
+            <ng-container nbTreeGridColumnDef="deployments">
+                <th nbTreeGridHeaderCell *nbTreeGridHeaderCellDef>Déploiements</th>
+                <td nbTreeGridCell *nbTreeGridCellDef="let row">{{row.data.deployments}}</td>
+            </ng-container>
+
+            <ng-container nbTreeGridColumnDef="successfulDeployments">
+                <th nbTreeGridHeaderCell *nbTreeGridHeaderCellDef>Déploiements réussis</th>
+                <td nbTreeGridCell *nbTreeGridCellDef="let row" style="color: #00d68f;">
+                    {{row.data.successfulDeployments}}</td>
+            </ng-container>
+
+            <ng-container nbTreeGridColumnDef="failedDeployments">
+                <th nbTreeGridHeaderCell *nbTreeGridHeaderCellDef>Déploiements ratés</th>
+                <td nbTreeGridCell *nbTreeGridCellDef="let row" style="color: #ff3d71;">{{row.data.failedDeployments}}
+                </td>
+            </ng-container>
+        </table>
+    </nb-card-body>
+</nb-card>

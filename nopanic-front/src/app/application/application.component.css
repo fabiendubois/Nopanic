@@ -1,0 +1,7 @@
+.card-application {
+    margin-top: 30px;
+}
+
+.card-application:hover {
+    background-color: gainsboro;
+}

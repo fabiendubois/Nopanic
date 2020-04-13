@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+}
+
+.container_card {
+    margin: 5px;
+}
+
+.container_card_title {
+    font-size: 130%;
+}

@@ -1,0 +1,17 @@
+.title {
+    font-size: 110%;
+    font-weight: 600;
+    color: #c5cee0;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.title:hover {
+    font-weight: 900;
+    color: #598bff;
+}
+
+.routerLinkActive {
+    font-weight: 900;
+    color: #598bff;
+}

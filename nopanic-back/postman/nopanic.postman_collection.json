@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "f5f802cf-d318-4084-8e99-a9b37daf06be",
+		"name": "nopanic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST deployments",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"application\": \"titi\",\n\t\"environment\": \"stg\",\n\t\"timestamp\": \"1584263690\",\n\t\"status\": true,\n\t\"version\": \"1.0\",\n\t\"metadata\": {}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/deployments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"deployments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET deployments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/deployments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"deployments"
+					],
+					"query": [
+						{
+							"key": "application",
+							"value": "toto",
+							"disabled": true
+						},
+						{
+							"key": "environnement",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

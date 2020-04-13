@@ -1,0 +1,12 @@
+<nb-layout>
+    <nb-layout-column>
+        <input type="text" nbInput fullWidth status="basic" placeholder="Recherche une application"
+            (keyup)="onKeyUp($event)">
+        <nb-card *ngFor="let app of displayedApplications" accent="info" class="card-application"
+            (click)="onNavigate(app)">
+            <nb-card-header>
+                <span>{{app}}</span>
+            </nb-card-header>
+        </nb-card>
+    </nb-layout-column>
+</nb-layout>

@@ -1,0 +1,12 @@
+<nb-card>
+    <nb-card-header>
+        <h3>{{ application | titlecase}}</h3>
+    </nb-card-header>
+    <nb-card-body>
+
+        <div *ngFor="let deployment of deployments">
+            <app-deployment-detail [deployment]="deployment" [withTitle]="false"></app-deployment-detail>
+        </div>
+
+    </nb-card-body>
+</nb-card>
